@@ -7,24 +7,231 @@
 //
 
 import UIKit
+import CoreData
+
+//MARK: Define my variables to work with the database
+let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+var user: [NSManagedObject] = []
+var userArray: [UserProfile]!
+let datafilepath = FileManager.default.urls(for: .documentDirectory,
+                                            in: .userDomainMask).first?.appendingPathComponent("Items.plist")
+///MARK: My local variables in my code
+var currentUser: UserProfile!
+var questions = [String]()
+var counter = 0
+
+
 
 class TechnicalSkillsViewController: UIViewController {
 
+//    //MARK: Define my variables to work with the database
+//    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//    var user: [NSManagedObject] = []
+//    var userArray: [UserProfile]!
+//    let datafilepath = FileManager.default.urls(for: .documentDirectory,
+//                                                in: .userDomainMask).first?.appendingPathComponent("Items.plist")
+//    ///MARK: My local variables in my code
+//    var currentUser: UserProfile!
+//    var questions = [String]()
+//    var counter = 0
+//
+    
+    @IBOutlet weak var questionLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        //print(datafilepath)
+        firstUse()
+        loadItems()
+        
+        currentUser = user[0] as! UserProfile
+        loadQuestions()
+        
+        
+        questionLabel.text = questions[counter]
+        view.backgroundColor = UIColor.blue
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeLeft.direction = .left
+        self.view.addGestureRecognizer(swipeLeft)
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeRight.direction = .right
+        self.view.addGestureRecognizer(swipeRight)
+        
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeUp.direction = .up
+        self.view.addGestureRecognizer(swipeUp)
+        
+        let swipeDown = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
+        swipeDown.direction = .down
+        self.view.addGestureRecognizer(swipeDown)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func saveItems(){
+        do{ try context.save() }
+        catch{
+            let nserror = error as NSError
+            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            
+        }
     }
-    */
+    
+    func loadQuestions(){
+        if let contentsOfURL = Bundle.main.url(forResource: "technicalquestions", withExtension: "csv") {
+            
+            // Remove all the menu items before preloading
+            if let items = parseCSV(contentsOfURL: contentsOfURL as NSURL, encoding: String.Encoding.utf8) {
+                questions = items
+            }
+        }
+    }
+    
+    func parseCSV(contentsOfURL: NSURL, encoding: String.Encoding) -> [String]?
+    {
+        /// load CSV function
+        let delimiter = ","
+        var items:[String]?
+        
+        let optContent = try? String(contentsOf: contentsOfURL as URL!)
+        guard let content = optContent
+            else
+        {
+            print("That didn't work!")
+            return items
+        }
+        
+        items = []
+        
+        let lines:[String] = content.components(separatedBy: NSCharacterSet.newlines)
+        
+        for line in lines{
+            var values:[String] = []
+            if line != ""
+            {
+                if line.range( of: "\"" ) != nil
+                {
+                    var textToScan: String = line
+                    var value:NSString?
+                    var textScanner:Scanner = Scanner(string: textToScan)
+                    while textScanner.string != ""
+                    {
+                        if (textScanner.string as NSString).substring(to: 1) == "\"" {
+                            textScanner.scanLocation += 1
+                            textScanner.scanUpTo("\"", into: &value)
+                            textScanner.scanLocation += 1
+                        } else {
+                            textScanner.scanUpTo(delimiter, into: &value)
+                        }
+                        
+                        // Store the value into the values array
+                        values.append(value as! String)
+                    }
+                    
+                    // Retrieve the unscanned remainder of the string
+                    if textScanner.scanLocation < textScanner.string.count {
+                        textToScan = (textScanner.string as NSString).substring(from: textScanner.scanLocation + 1)
+                    } else {
+                        textToScan = ""
+                    }
+                    textScanner = Scanner(string: textToScan)
+                }
+                else  {
+                    values = line.components(separatedBy: delimiter)
+                }
+                
+                ///image_file_name: String, name: String, rating: Int
+                // Put the values into the tuple and add it to the items array
+                let item = (values[1])
+                items?.append(item)
+            }
+        }
+        //print(items)
+        return items
+    }
+    
+    @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
+        
+        // brain(gesture.direction)
+        
+        if gesture.direction == UISwipeGestureRecognizer.Direction.right {
+            brain(answer: "2")
+        }
+        else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
+            brain(answer: "0")
+        }
+        else if gesture.direction == UISwipeGestureRecognizer.Direction.up {
+            brain(answer: "1")
+        }
+        else if gesture.direction == UISwipeGestureRecognizer.Direction.down {
+            print("Swipe Down")
+        }
+    }
+    
+    func brain(answer: String){
+        counter = counter + 1
+        // questionLabel.text = questions[counter]
+        switch counter
+        {
+        case 0...11:
+            //view.backgroundColor = UIColor.yellow
+            questionLabel.text = questions[counter]
+            currentUser.personality = currentUser.personality! + answer
+        //currentUser.personality = answer
+        case 11...23: view.backgroundColor = UIColor.blue
+        case 12...questions.count - 1 : view.backgroundColor = UIColor.green
+        default:view.backgroundColor = UIColor.white
+        questionLabel.text = "No more questions"
+        }
+        saveItems()
+    }
+    
+    func firstUse(){
+        if let managedObjectContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let user = NSEntityDescription.insertNewObject(forEntityName: "UserProfile", into: managedObjectContext) as! UserProfile
+            user.name = "Joy Techlie"
+            user.level = 0
+            user.technical = "X"
+            user.personality = "X"
+            user.passion = "X"
+        }
+        saveItems()
+    }
+    
+    //    func saveItems(){
+    //        do{ try context.save() }
+    //        catch{
+    //            let nserror = error as NSError
+    //            fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+    //
+    //        }
+    //    }
+    
+    func loadItems(){
+        let request : NSFetchRequest<UserProfile> = UserProfile.fetchRequest()
+        do{
+            try
+                user = context.fetch(request)
+        }
+        catch
+        {
+            print("Error fetching data \(error)")
+        }
+    }
+    
+    //  let mainStoryBoard = UIStoryboard(name: "swipe", bundle: Bundle.main)
+    //
+    //    guard let destinationVC = mainStoryBoard.instantiateViewController(withIdentifier: "techBoost") as? UIViewController
+    //                    else
+    //                    {
+    //                        print("Couldn't find view controller")
+    //                        return
+    //                    }
+    //
+    //       navigationController?.pushViewController(destinationVC, animated: true)
+    //
+    //    onButtonTapped()
+    //     performSegue(withIdentifier: goToData, sender: self)
+    //     }
 
 }

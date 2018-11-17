@@ -18,31 +18,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwm-kN-05j">
-                                <rect key="frame" x="39" y="50" width="248" height="168"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">In Build You Up we help you figure exactly where you are right now - and then boost you to the next level. You don't even realize yet how much potential you have. </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hZS-av-YHI">
-                                <rect key="frame" x="33" y="233" width="260" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <string key="text">No time to waste - a quick fire 'get to know you' exercise. On the next screen, you will see a sequence of statements. Swipe right to agree, left to disagree. Up for 'not sure'  </string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XuO-oq-VoA">
                                 <rect key="frame" x="39" y="556" width="260" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.77215474839999998" green="0.94358366729999998" blue="0.83125579360000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="I'm ready!"/>
                                 <connections>
-                                    <segue destination="mJF-1v-V3v" kind="presentation" id="ho8-6A-hwG"/>
+                                    <segue destination="BVp-Vh-gCN" kind="presentation" id="iy1-Hp-ls1"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vwm-kN-05j">
+                                <rect key="frame" x="63" y="64" width="248" height="168"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">In Build You Up we help you figure exactly where you are right now - and then boost you to the next level. You don't even realize yet how much potential you have. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -50,7 +42,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-452" y="116"/>
+            <point key="canvasLocation" x="-1319" y="314"/>
         </scene>
         <!--Swipe View Controller-->
         <scene sceneID="v61-ng-VIL">
@@ -106,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PiA-fh-Vcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1254" y="125"/>
+            <point key="canvasLocation" x="1742" y="313"/>
         </scene>
         <!--Technical Skills View Controller-->
         <scene sceneID="SmJ-jv-UT1">
@@ -121,7 +113,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IG8-87-MvR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2582" y="125"/>
+            <point key="canvasLocation" x="2455" y="313"/>
+        </scene>
+        <!--Levelling View Controller-->
+        <scene sceneID="ghO-UT-Grs">
+            <objects>
+                <viewController id="BVp-Vh-gCN" customClass="LevellingViewController" customModule="Build_Us_Up" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X3F-L9-imA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe Right To Agree -&gt; " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C4h-eK-JVj">
+                                <rect key="frame" x="30" y="32" width="315" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98407483100000004" green="0.72432940629999998" blue="0.28538170689999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt; -  SwipeLeft to Disagree " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gzh-VR-fO3">
+                                <rect key="frame" x="30" y="589" width="315" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.98407483100000004" green="0.72432940629999998" blue="0.28538170689999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mAU-DS-ibS">
+                                <rect key="frame" x="30" y="206" width="315" height="113"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <viewLayoutGuide key="safeArea" id="fkz-Jn-Z8X"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="fgN-XD-L0J" appends="YES" id="QJ0-ei-l2r"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="questionLabel" destination="mAU-DS-ibS" id="2tZ-1F-Aay"/>
+                        <segue destination="Xg5-Gn-2ha" kind="presentation" identifier="moveToTech" id="XqY-Zd-M6W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CoY-b0-gME" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="fgN-XD-L0J">
+                    <connections>
+                        <action selector="swipeRight:" destination="BVp-Vh-gCN" id="F3B-uy-MK3"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="FIh-34-W34">
+                    <connections>
+                        <action selector="swipeLeft:" destination="BVp-Vh-gCN" id="pbc-9z-bw4"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-543" y="313"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="MCX-Wu-nC1">
@@ -149,6 +199,9 @@
                                 <rect key="frame" x="139" y="593" width="177" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Tell us your skills!"/>
+                                <connections>
+                                    <segue destination="rt8-eT-TfL" kind="presentation" id="x3a-jV-FMo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -163,7 +216,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5Y-v6-pvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1924" y="124.58770614692655"/>
+            <point key="canvasLocation" x="334" y="313"/>
+        </scene>
+        <!--Technical Skills View Controller-->
+        <scene sceneID="j9T-Nf-F54">
+            <objects>
+                <viewController id="rt8-eT-TfL" customClass="TechnicalSkillsViewController" customModule="Build_Us_Up" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W93-Ak-czM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="PFY-0c-ypL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rQc-yt-3PG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002" y="313"/>
         </scene>
     </scenes>
 </document>
