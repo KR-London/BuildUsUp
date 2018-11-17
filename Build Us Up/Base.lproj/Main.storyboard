@@ -50,12 +50,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-142" y="116"/>
+            <point key="canvasLocation" x="-452" y="116"/>
         </scene>
         <!--Swipe View Controller-->
         <scene sceneID="v61-ng-VIL">
             <objects>
-                <viewController id="mJF-1v-V3v" customClass="SwipeViewController" customModule="Build_Us_Up" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="swipe" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mJF-1v-V3v" customClass="SwipeViewController" customModule="Build_Us_Up" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jFt-Zt-bQ2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -74,16 +74,16 @@
                                     <segue destination="BYZ-38-t0r" kind="presentation" id="qCX-oQ-MBL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe Right To Agree -&gt; " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eu9-ob-HeK">
-                                <rect key="frame" x="30" y="50" width="315" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt; -  SwipeLeft to Disagree " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JK-pX-2a9">
+                                <rect key="frame" x="30" y="526" width="315" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98407483100000004" green="0.72432940629999998" blue="0.28538170689999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&lt; -  SwipeLeft to Disagree " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4JK-pX-2a9">
-                                <rect key="frame" x="30" y="526" width="315" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Swipe Right To Agree -&gt; " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eu9-ob-HeK">
+                                <rect key="frame" x="30" y="50" width="315" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.98407483100000004" green="0.72432940629999998" blue="0.28538170689999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -106,7 +106,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PiA-fh-Vcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="584.79999999999995" y="115.59220389805098"/>
+            <point key="canvasLocation" x="1254" y="125"/>
+        </scene>
+        <!--Technical Skills View Controller-->
+        <scene sceneID="SmJ-jv-UT1">
+            <objects>
+                <viewController id="jCf-xR-nQY" customClass="TechnicalSkillsViewController" customModule="Build_Us_Up" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7xl-st-nbN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="D2W-oH-Eka"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IG8-87-MvR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2582" y="125"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MCX-Wu-nC1">
+            <objects>
+                <viewController storyboardIdentifier="techBoost" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xg5-Gn-2ha" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dfp-uX-tbT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Now some skill questions. " textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZ8-Tl-bgD">
+                                <rect key="frame" x="20" y="22" width="335" height="157"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="thc-Hl-29u">
+                                <rect key="frame" x="29" y="220" width="315" height="306"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Swipe right if you know this enough to teach someone (be brave). Swipe left if you don't know this. Swipe up if you're learning. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UxE-0g-wGf">
+                                <rect key="frame" x="139" y="593" width="177" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Tell us your skills!"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8JY-JF-1fG" firstAttribute="bottom" secondItem="aZ8-Tl-bgD" secondAttribute="bottom" constant="20" id="83K-UX-SLJ"/>
+                            <constraint firstItem="aZ8-Tl-bgD" firstAttribute="leading" secondItem="8JY-JF-1fG" secondAttribute="leading" constant="20" id="K4H-8D-x76"/>
+                            <constraint firstItem="8JY-JF-1fG" firstAttribute="trailing" secondItem="aZ8-Tl-bgD" secondAttribute="trailing" constant="20" id="Tk1-eP-l5r"/>
+                            <constraint firstItem="aZ8-Tl-bgD" firstAttribute="top" secondItem="8JY-JF-1fG" secondAttribute="top" constant="2" id="cOw-MO-CzA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8JY-JF-1fG"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z5Y-v6-pvA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1924" y="124.58770614692655"/>
         </scene>
     </scenes>
 </document>

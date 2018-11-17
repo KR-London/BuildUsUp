@@ -205,4 +205,19 @@ class SwipeViewController: UIViewController {
             print("Error fetching data \(error)")
         }
     }
+    
+//  let mainStoryBoard = UIStoryboard(name: "swipe", bundle: Bundle.main)
+//
+//    guard let destinationVC = mainStoryBoard.instantiateViewController(withIdentifier: "techBoost") as? UIViewController
+//                    else
+//                    {
+//                        print("Couldn't find view controller")
+//                        return
+//                    }
+//
+//       navigationController?.pushViewController(destinationVC, animated: true)
+//
+//    onButtonTapped()
+//     performSegue(withIdentifier: goToData, sender: self)
+//     }
 }

@@ -15,6 +15,8 @@
 		444BB62A21A022A4005FD581 /* Build_Us_UpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444BB62921A022A4005FD581 /* Build_Us_UpTests.swift */; };
 		444BB63521A02558005FD581 /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444BB63421A02558005FD581 /* SwipeViewController.swift */; };
 		444BB63B21A04ABA005FD581 /* questions.csv in Resources */ = {isa = PBXBuildFile; fileRef = 444BB63A21A04ABA005FD581 /* questions.csv */; };
+		444BB63E21A06662005FD581 /* technicalquestions.csv in Resources */ = {isa = PBXBuildFile; fileRef = 444BB63D21A06662005FD581 /* technicalquestions.csv */; };
+		444BB64021A06A1C005FD581 /* TechnicalSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444BB63F21A06A1C005FD581 /* TechnicalSkillsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		444BB62B21A022A4005FD581 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		444BB63421A02558005FD581 /* SwipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeViewController.swift; sourceTree = "<group>"; };
 		444BB63A21A04ABA005FD581 /* questions.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = questions.csv; sourceTree = "<group>"; };
+		444BB63D21A06662005FD581 /* technicalquestions.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalquestions.csv; sourceTree = SOURCE_ROOT; };
+		444BB63F21A06A1C005FD581 /* TechnicalSkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalSkillsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +87,11 @@
 			children = (
 				444BB61121A022A3005FD581 /* AppDelegate.swift */,
 				444BB63421A02558005FD581 /* SwipeViewController.swift */,
+				444BB63F21A06A1C005FD581 /* TechnicalSkillsViewController.swift */,
 				444BB61521A022A3005FD581 /* Main.storyboard */,
 				444BB61B21A022A4005FD581 /* Assets.xcassets */,
 				444BB61D21A022A4005FD581 /* LaunchScreen.storyboard */,
+				444BB63D21A06662005FD581 /* technicalquestions.csv */,
 				444BB63A21A04ABA005FD581 /* questions.csv */,
 				444BB62021A022A4005FD581 /* Info.plist */,
 				444BB61821A022A3005FD581 /* Build_Us_Up.xcdatamodeld */,
@@ -186,6 +192,7 @@
 				444BB61F21A022A4005FD581 /* LaunchScreen.storyboard in Resources */,
 				444BB61C21A022A4005FD581 /* Assets.xcassets in Resources */,
 				444BB63B21A04ABA005FD581 /* questions.csv in Resources */,
+				444BB63E21A06662005FD581 /* technicalquestions.csv in Resources */,
 				444BB61721A022A3005FD581 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +213,7 @@
 			files = (
 				444BB61A21A022A3005FD581 /* Build_Us_Up.xcdatamodeld in Sources */,
 				444BB61221A022A3005FD581 /* AppDelegate.swift in Sources */,
+				444BB64021A06A1C005FD581 /* TechnicalSkillsViewController.swift in Sources */,
 				444BB63521A02558005FD581 /* SwipeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
