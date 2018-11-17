@@ -138,48 +138,24 @@ class SwipeViewController: UIViewController {
     }
 
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
+        
+       // brain(gesture.direction)
+        
         if gesture.direction == UISwipeGestureRecognizer.Direction.right {
-            print("Swipe Right")
-           // foodArray[foodArray.index(of: currentlyPicturedFood)!].rating = 1
-           // foodImage.image = UIImage(named:"q2.001.jpg")
-            currentUser.personality = currentUser.personality ?? "" + "1"
-            
-            brain()
-//            counter = counter + 1
-//            questionLabel.text = questions[counter]
-//            switch counter
-//            {
-//            case 0...6:
-//                view.backgroundColor = UIColor.yellow
-//                questionLabel.text = questions[counter]
-//            case 6...12: view.backgroundColor = UIColor.blue
-//            case 12...questions.count - 1 : view.backgroundColor = UIColor.green
-//            default:view.backgroundColor = UIColor.white
-//                questionLabel.text = "No more questions"
-//            }
-            //updatePicture()
+            brain(answer: "1")
         }
         else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
-            print("Swipe Left")
-             brain()
-            let temp = currentUser.personality ?? ""
-            currentUser.personality = temp + "0"
-            saveItems()
-           // foodArray[foodArray.index(of: currentlyPicturedFood)!].rating = 3
-           // foodImage.image = UIImage(named:"q3.001.jpg")
-            //updatePicture()
+            brain(answer: "0")
         }
         else if gesture.direction == UISwipeGestureRecognizer.Direction.up {
             print("Swipe Up")
-            //foodArray[foodArray.index(of: currentlyPicturedFood)!].rating = 2
-            //updatePicture()
         }
         else if gesture.direction == UISwipeGestureRecognizer.Direction.down {
             print("Swipe Down")
         }
     }
     
-    func brain(){
+    func brain(answer: String){
         counter = counter + 1
        // questionLabel.text = questions[counter]
         switch counter
@@ -187,11 +163,14 @@ class SwipeViewController: UIViewController {
         case 0...11:
             view.backgroundColor = UIColor.yellow
             questionLabel.text = questions[counter]
+            currentUser.personality = currentUser.personality! + answer
+           //currentUser.personality = answer
         case 11...23: view.backgroundColor = UIColor.blue
         case 12...questions.count - 1 : view.backgroundColor = UIColor.green
         default:view.backgroundColor = UIColor.white
         questionLabel.text = "No more questions"
         }
+        saveItems()
     }
     
     func firstUse(){
@@ -199,9 +178,9 @@ class SwipeViewController: UIViewController {
             let user = NSEntityDescription.insertNewObject(forEntityName: "UserProfile", into: managedObjectContext) as! UserProfile
                 user.name = "Joy Techlie"
                 user.level = 0
-                user.technical = ""
-                user.personality = ""
-                user.passion = ""
+                user.technical = "X"
+                user.personality = "X"
+                user.passion = "X"
                  }
         saveItems()
     }
