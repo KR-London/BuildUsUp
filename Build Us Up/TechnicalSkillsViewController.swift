@@ -10,15 +10,15 @@ import UIKit
 import CoreData
 
 //MARK: Define my variables to work with the database
-let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-var user: [NSManagedObject] = []
-var userArray: [UserProfile]!
-let datafilepath = FileManager.default.urls(for: .documentDirectory,
-                                            in: .userDomainMask).first?.appendingPathComponent("Items.plist")
-///MARK: My local variables in my code
-var currentUser: UserProfile!
-var questions = [String]()
-var counter = 0
+//let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//var user: [NSManagedObject] = []
+//var userArray: [UserProfile]!
+//let datafilepath = FileManager.default.urls(for: .documentDirectory,
+//                                            in: .userDomainMask).first?.appendingPathComponent("Items.plist")
+/////MARK: My local variables in my code
+//var currentUser: UserProfile!
+//var questions = [String]()
+//var counter = 0
 
 
 
@@ -35,16 +35,17 @@ class TechnicalSkillsViewController: UIViewController {
 //    var questions = [String]()
 //    var counter = 0
 //
+    var  counter = 0
     
     @IBOutlet weak var questionLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //print(datafilepath)
-        firstUse()
-        loadItems()
+        //firstUse()
+        //loadItems()
         
-        currentUser = user[0] as! UserProfile
+       // currentUser = user[0] as! UserProfile
         loadQuestions()
         
         
@@ -178,10 +179,9 @@ class TechnicalSkillsViewController: UIViewController {
             questionLabel.text = questions[counter]
             currentUser.personality = currentUser.personality! + answer
         //currentUser.personality = answer
-        case 11...23: view.backgroundColor = UIColor.blue
-        case 12...questions.count - 1 : view.backgroundColor = UIColor.green
-        default:view.backgroundColor = UIColor.white
-        questionLabel.text = "No more questions"
+        //case 11...23: view.backgroundColor = UIColor.blue
+        //case 12...questions.count - 1 : view.backgroundColor = UIColor.green
+        default: performSegue(withIdentifier: "segueToPersonality", sender: self)
         }
         saveItems()
     }

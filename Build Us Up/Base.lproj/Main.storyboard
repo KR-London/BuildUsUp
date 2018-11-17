@@ -98,7 +98,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PiA-fh-Vcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742" y="313"/>
+            <point key="canvasLocation" x="1762" y="313"/>
         </scene>
         <!--Technical Skills View Controller-->
         <scene sceneID="SmJ-jv-UT1">
@@ -150,9 +150,6 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="fkz-Jn-Z8X"/>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="fgN-XD-L0J" appends="YES" id="QJ0-ei-l2r"/>
-                        </connections>
                     </view>
                     <connections>
                         <outlet property="questionLabel" destination="mAU-DS-ibS" id="2tZ-1F-Aay"/>
@@ -160,16 +157,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CoY-b0-gME" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="right" id="fgN-XD-L0J">
-                    <connections>
-                        <action selector="swipeRight:" destination="BVp-Vh-gCN" id="F3B-uy-MK3"/>
-                    </connections>
-                </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="FIh-34-W34">
-                    <connections>
-                        <action selector="swipeLeft:" destination="BVp-Vh-gCN" id="pbc-9z-bw4"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-543" y="313"/>
         </scene>
@@ -225,13 +212,26 @@
                     <view key="view" contentMode="scaleToFill" id="W93-Ak-czM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zU5-nY-tRx">
+                                <rect key="frame" x="16" y="255" width="343" height="121"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="PFY-0c-ypL"/>
                     </view>
+                    <connections>
+                        <outlet property="questionLabel" destination="zU5-nY-tRx" id="70p-h2-ok1"/>
+                        <segue destination="mJF-1v-V3v" kind="show" identifier="segueToPersonality" id="xPQ-mL-o7r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQc-yt-3PG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1002" y="313"/>
+            <point key="canvasLocation" x="1004" y="313"/>
         </scene>
     </scenes>
 </document>
