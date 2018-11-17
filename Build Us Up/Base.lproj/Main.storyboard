@@ -51,6 +51,49 @@
             </objects>
             <point key="canvasLocation" x="-1319.2" y="313.49325337331339"/>
         </scene>
+        <!--Personality Result View Controller-->
+        <scene sceneID="u1R-Oh-WIq">
+            <objects>
+                <viewController id="Eza-iX-9Vw" customClass="PersonalityResultViewController" customModule="Build_Us_Up" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZTA-OK-Yjb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9w-fz-cfR">
+                                <rect key="frame" x="62" y="122" width="250" height="105"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fdo-ob-PfD">
+                                <rect key="frame" x="16" y="411" width="343" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.92156862750000001" green="0.83529411760000005" blue="0.83529411760000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Keep going to find your career match....">
+                                    <color key="titleColor" red="0.40784313729999999" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YGD-6m-L83" kind="presentation" id="Nna-zY-51l"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bVv-gv-64D"/>
+                    </view>
+                    <connections>
+                        <outlet property="personalityResult" destination="r9w-fz-cfR" id="4Z7-L0-TDw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sm7-st-DxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="y5z-Xl-DUX">
+                    <connections>
+                        <segue destination="YGD-6m-L83" kind="presentation" id="393-Hk-5u9"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2953" y="-79"/>
+        </scene>
         <!--Swipe View Controller-->
         <scene sceneID="v61-ng-VIL">
             <objects>
@@ -93,12 +136,12 @@
                     </view>
                     <connections>
                         <outlet property="questionLabel" destination="zbP-hq-WB1" id="tww-Ir-6hH"/>
-                        <segue destination="YGD-6m-L83" kind="showDetail" identifier="segueToPassion" id="OcH-1V-h51"/>
+                        <segue destination="Eza-iX-9Vw" kind="presentation" identifier="segueToPassion" id="ng0-r4-wO8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PiA-fh-Vcj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2028" y="313"/>
+            <point key="canvasLocation" x="2305" y="313"/>
         </scene>
         <!--Passion View Controller-->
         <scene sceneID="tD2-cR-Exp">
@@ -301,7 +344,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2rQ-4L-N6E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2790" y="313"/>
+            <point key="canvasLocation" x="3790" y="313"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="DZs-7u-MKB">
@@ -329,7 +372,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e8S-Dy-SRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3537" y="313"/>
+            <point key="canvasLocation" x="4590" y="313"/>
         </scene>
         <!--Levelling View Controller-->
         <scene sceneID="ghO-UT-Grs">
@@ -450,7 +493,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="343" y="313"/>
+            <point key="canvasLocation" x="465" y="-610"/>
         </scene>
         <!--Technical Skills View Controller-->
         <scene sceneID="j9T-Nf-F54">
@@ -478,10 +521,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rQc-yt-3PG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1239" y="313"/>
+            <point key="canvasLocation" x="1316" y="-610"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="wX2-38-nmO"/>
+        <segue reference="Nna-zY-51l"/>
     </inferredMetricsTieBreakers>
 </document>

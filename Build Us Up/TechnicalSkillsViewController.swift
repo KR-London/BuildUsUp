@@ -179,7 +179,7 @@ class TechnicalSkillsViewController: UIViewController {
         case 0...11:
             //view.backgroundColor = UIColor.yellow
             questionLabel.text = questions[counter]
-            currentUser.personality = currentUser.personality! + answer
+            currentUser.technical = currentUser.technical! + answer
         //currentUser.personality = answer
         //case 11...23: view.backgroundColor = UIColor.blue
         //case 12...questions.count - 1 : view.backgroundColor = UIColor.green

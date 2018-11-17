@@ -146,7 +146,7 @@ class SwipeViewController: UIViewController {
             brain(answer: "1")
         }
         else if gesture.direction == UISwipeGestureRecognizer.Direction.left {
-            brain(answer: "0")
+            brain(answer: "-1")
         }
         else if gesture.direction == UISwipeGestureRecognizer.Direction.up {
             print("Swipe Up")
