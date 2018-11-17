@@ -18,6 +18,8 @@
 		444BB63E21A06662005FD581 /* technicalquestions.csv in Resources */ = {isa = PBXBuildFile; fileRef = 444BB63D21A06662005FD581 /* technicalquestions.csv */; };
 		444BB64021A06A1C005FD581 /* TechnicalSkillsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444BB63F21A06A1C005FD581 /* TechnicalSkillsViewController.swift */; };
 		444BB64221A06F71005FD581 /* LevellingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444BB64121A06F71005FD581 /* LevellingViewController.swift */; };
+		44E54F8221A098BB00FA9FC6 /* PassionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E54F8121A098BB00FA9FC6 /* PassionViewController.swift */; };
+		44E54F8421A0C66700FA9FC6 /* JobTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E54F8321A0C66700FA9FC6 /* JobTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,8 @@
 		444BB63D21A06662005FD581 /* technicalquestions.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = technicalquestions.csv; sourceTree = SOURCE_ROOT; };
 		444BB63F21A06A1C005FD581 /* TechnicalSkillsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechnicalSkillsViewController.swift; sourceTree = "<group>"; };
 		444BB64121A06F71005FD581 /* LevellingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevellingViewController.swift; sourceTree = "<group>"; };
+		44E54F8121A098BB00FA9FC6 /* PassionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassionViewController.swift; sourceTree = "<group>"; };
+		44E54F8321A0C66700FA9FC6 /* JobTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,8 @@
 				444BB63421A02558005FD581 /* SwipeViewController.swift */,
 				444BB63F21A06A1C005FD581 /* TechnicalSkillsViewController.swift */,
 				444BB61521A022A3005FD581 /* Main.storyboard */,
+				44E54F8321A0C66700FA9FC6 /* JobTableViewController.swift */,
+				44E54F8121A098BB00FA9FC6 /* PassionViewController.swift */,
 				444BB64121A06F71005FD581 /* LevellingViewController.swift */,
 				444BB61B21A022A4005FD581 /* Assets.xcassets */,
 				444BB61D21A022A4005FD581 /* LaunchScreen.storyboard */,
@@ -218,6 +224,8 @@
 				444BB61221A022A3005FD581 /* AppDelegate.swift in Sources */,
 				444BB64021A06A1C005FD581 /* TechnicalSkillsViewController.swift in Sources */,
 				444BB63521A02558005FD581 /* SwipeViewController.swift in Sources */,
+				44E54F8221A098BB00FA9FC6 /* PassionViewController.swift in Sources */,
+				44E54F8421A0C66700FA9FC6 /* JobTableViewController.swift in Sources */,
 				444BB64221A06F71005FD581 /* LevellingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

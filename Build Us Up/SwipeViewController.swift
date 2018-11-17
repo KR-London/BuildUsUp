@@ -36,7 +36,8 @@ class SwipeViewController: UIViewController {
   
         
         questionLabel.text = questions[counter]
-        view.backgroundColor = UIColor.yellow
+        questionLabel.textColor = UIColor(hexString: "685454")
+        view.backgroundColor =  UIColor(hexString: "f2f2f2")
         
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleGesture))
         swipeLeft.direction = .left
@@ -161,14 +162,14 @@ class SwipeViewController: UIViewController {
         switch counter
         {
         case 0...11:
-            view.backgroundColor = UIColor.yellow
+            //view.backgroundColor = UIColor.yellow
             questionLabel.text = questions[counter]
             currentUser.personality = currentUser.personality! + answer
            //currentUser.personality = answer
-        case 11...23: view.backgroundColor = UIColor.blue
-        case 12...questions.count - 1 : view.backgroundColor = UIColor.green
-        default:view.backgroundColor = UIColor.white
-        questionLabel.text = "No more questions"
+       // case 11...23: view.backgroundColor = UIColor.blue
+       // case 12...questions.count - 1 : view.backgroundColor = UIColor.green
+        default:
+            performSegue(withIdentifier: "segueToPassion", sender: self)
         }
         saveItems()
     }
